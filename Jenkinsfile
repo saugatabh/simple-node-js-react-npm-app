@@ -21,7 +21,7 @@ pipeline {
 		stage('Deliver') { 
             steps {
 				bat 'echo The following npm  command starts your simple Node.js/React'
-				bat 'npm start'	
+				bat 'start npm start'	
             }
         }
 		stage('Kill') { 
