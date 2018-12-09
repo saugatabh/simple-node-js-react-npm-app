@@ -22,7 +22,11 @@ pipeline {
             steps {
 				bat 'echo The following npm  command starts your simple Node.js/React'
 				bat 'npm start'	
-                bat 'echo ... will wait for 15 secs and then kill'
+            }
+        }
+		stage('Kill') { 
+            steps {
+				bat 'echo ... will wait for 15 secs and then kill'
 				bat 'SLEEP 10'
 				bat 'taskkill /F /IM node.exe'
             }
