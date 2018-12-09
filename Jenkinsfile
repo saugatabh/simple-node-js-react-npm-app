@@ -18,5 +18,11 @@ pipeline {
 				bat 'npm test'
             }
         }
+		stage('Deliver') { 
+            steps {
+				bat 'echo The following npm  command starts your simple Node.js/React'
+				bat 'npm start'				
+            }
+        }
     }
 }
