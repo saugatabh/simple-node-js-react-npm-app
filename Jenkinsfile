@@ -26,8 +26,8 @@ pipeline {
         }
 		stage('Kill') { 
             steps {
-				bat 'echo ... will wait for 15 secs and then kill'
-				bat 'SLEEP 10'
+				bat 'echo ... will wait for 25 secs and then kill'
+				bat 'TIMEOUT /T 25'
 				bat 'taskkill /F /IM node.exe'
             }
         }
