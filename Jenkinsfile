@@ -21,15 +21,10 @@ pipeline {
 		stage('Deliver') { 
             steps {
 				bat 'echo The following npm  command starts your simple Node.js/React'
-				bat 'start npm start'	
-            }
-        }
-		stage('Kill') { 
-            steps {
-				bat 'echo ... will wait for 25 secs and then kill'
+				bat 'start npm start'
 				timeout(time: 15, unit: 'SECONDS'){}
-				bat 'taskkill /F /IM node.exe'
             }
         }
+		
     }
 }
